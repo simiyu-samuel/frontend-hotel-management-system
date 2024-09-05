@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to our hotel</title>
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/f8fb36d9f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- flatpicker -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  </head>
+  <body>
+    <div class="mt-0">
+      <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">
+            <img src="img/logo.png" height="64" alt="CoolBrand" />
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+              <a href="#" class="nav-item nav-link active">Home</a>
+              <a href="#" class="nav-item nav-link">About Us</a>
+              <a href="#" class="nav-item nav-link">Contact Us</a>
+              <a href="#" class="nav-item nav-link">Gallery</a>
+              <a href="#" class="nav-item nav-link">My Profile</a>
+            </div>
+            <div class="navbar-nav ms-auto left-link">
+              <a href="#" class="nav-item nav-link sign">Sign in</a>
+              <a href="#" class="nav-item nav-link book" id="bk"
+                ><i class="fa-solid fa-calendar-days"></i>Book Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/slide2.jpeg" class="d-block w-100" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              <span>____ BEYOND IMAGINABLE</span><br />ENJOY YOUR STAY WITH US
+            </h5>
+            <p>Quality & reliable services to our guests and customers.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide3.jpeg" class="d-block w-100" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>
+              <span>____ BEYOND IMAGINABLE</span><br />ENJOY YOUR STAY WITH US
+            </h5>
+            <p>Quality & reliable services to our guests and customers.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/slide3.jpeg" class="d-block w-100" />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>ENJOY YOUR STAY WITH US</h5>
+            <p>Quality & reliable services to our guests and customers</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="ihotel">
+      <div class="availlable d">
+        <div class="checkin d">
+          <h3>CHECK IN <i class="fa-solid fa-calendar-days"></i></h3>
+          <input type="date" name="date" id="datepicker" />
+        </div>
+        <div class="checkout d">
+          <h3>CHECK OUT <i class="fa-solid fa-calendar-days"></i></h3>
+          <input type="date" name="date" id="datepicker" class="datepicker" />
+        </div>
+        <div class="number d">
+          <div class="adults">
+            <p>ADULTS</p>
+            <div class="counter">
+              <button class="counter-btn minus">
+                <i class="fa-regular fa-square-minus"></i>
+              </button>
+              <input type="number" name="counter" id="counter" value="2" />
+              <button class="counter-btn plus">
+                <i class="fa-regular fa-square-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="childs">
+            <p>CHILDREN</p>
+            <div class="counter">
+              <button class="counter-btn minus">
+                <i class="fa-regular fa-square-minus"></i>
+              </button>
+              <input type="number" name="counter" id="counter" value="0" />
+              <button class="counter-btn plus">
+                <i class="fa-regular fa-square-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="availlability d">
+          <p>
+            Need Help: <br />
+            +245101200116/ +254721379581
+          </p>
+          <h3>CHECK AVAILLABILITY</h3>
+        </div>
+      </div>
+      <h1>iHOTEL</h1>
+      <p>
+        Whether you are travelling for business or pleasure, the luxury hotel
+        services offered by our <br />
+        Hotel make it an ideal choice for your stay. Book today to stay at one
+        of our modern,
+        <br />
+        personalized rooms with top-notch amenities.
+      </p>
+      <button class="btn btn-danger" id="res">Make a Reservation</button>
+    </div>
+
+    <div class="services">
+      <div class="services-info">
+        <h3>Services and Facilities at Our Hotel</h3>
+        <p>
+          The hotel’s luxurious surroundings, comfort, thoughtful touches and a
+          personalized service <br />
+          sets it apart from any other hotel, allowing you to feel like being at
+          home from your very first<br />
+          steps into the hotel.
+        </p>
+      </div>
+      <div class="services-gallery">
+        <div class="img-box">
+          <img src="img/bed.jpg" alt="" />
+          <h5>Wonderfull Experience</h5>
+        </div>
+        <div class="img-box">
+          <img src="img/s0.jpeg" alt="" />
+          <h5>Amenities & Services</h5>
+        </div>
+        <div class="img-box">
+          <img src="img/RES.jpg" alt="" />
+          <h5>Restaurant</h5>
+        </div>
+        <div class="img-box">
+          <img src="img/slider1.jpeg" alt="" />
+          <h5>Dine & Drink</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="rooms-h">
+      <div class="services-info">
+        <h3>Rooms & Suites</h3>
+        <p>
+          Our Hotel features comfortable rooms and suites to accommodate any
+          stay from a fun layover<br />
+          to an extended vacation in Kenya. Our affordable rates and convenient
+          location make us the <br />ideal place to drop off your bags and
+          explore
+        </p>
+      </div>
+      <div class="rooms-imgs">
+        <div class="room-img">
+          <img src="img/bed.jpg" alt="" />
+          <a href="#"
+            ><button class="btn btn-danger" id="res">Book Now</button></a
+          >
+          <h5>Standard Rooms</h5>
+        </div>
+        <div class="room-img">
+          <img src="img/slider2.jpeg" alt="" />
+          <a href="#"
+            ><button class="btn btn-danger" id="res">Book Now</button></a
+          >
+          <h5>Deluxe Rooms</h5>
+        </div>
+        <div class="room-img">
+          <img src="img/slider2.jpeg" alt="" />
+          <a href="#"
+            ><button class="btn btn-danger" id="res">Book Now</button></a
+          >
+          <h5>Executive Suites</h5>
+        </div>
+        <div class="room-img">
+          <img src="img/slider2.jpeg" alt="" />
+          <a href="#"
+            ><button class="btn btn-danger" id="res">Book Now</button></a
+          >
+          <h5>Triplet Rooms</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="amenities">
+      <h3>Amenities</h3>
+      <div class="amenities-box">
+        <div class="amenity">
+          <img src="img/onsite.jpeg" alt="" />
+          <h5>On-Site Restaurant</h5>
+        </div>
+        <div class="amenity">
+          <img src="img/parking.jpeg" alt="" />
+          <h5>Ample Parking Area</h5>
+        </div>
+        <div class="amenity">
+          <img src="img/wifi.png" alt="" />
+          <h5>Free Wi-Fi</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center" id="footer">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-outline btn-floating m-1"
+            href="#!"
+            role="button"
+            ></a>
+
+          <!-- Twitter -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-outline btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <!-- Instagram -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-outline btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            data-mdb-ripple-init
+            class="btn btn-outline btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        <!-- Section: Social media -->
+
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>Sign up for our newsletter</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-md-5 col-12">
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <input
+                    type="email"
+                    id="form5Example24"
+                    class="form-control"
+                  />
+                  <label class="form-label" for="form5Example24"
+                    >Email address</label
+                  >
+                </div>
+              </div>
+              <!--Grid column-->
+
+              <!--Grid column-->
+              <div class="col-auto">
+                <!-- Submit button -->
+                <button
+                  data-mdb-ripple-init
+                  type="submit"
+                  class="btn btn-outline mb-4"
+                >
+                  Subscribe
+                </button>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+
+        <!-- Section: Text -->
+        <section class="mb-4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+            distinctio earum repellat quaerat voluptatibus placeat nam, commodi
+            optio pariatur est quia magnam eum harum corrupti dicta, aliquam
+            sequi voluptate quas.
+          </p>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!"><i class="fab fa-facebook-f"></i
+                    >Facebook</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!"><i class="fab fa-facebook-f"></i
+          ></a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+              <h5 class="text-uppercase">Links</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <a class="text-body" href="#!">Link 1</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 2</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 3</a>
+                </li>
+                <li>
+                  <a class="text-body" href="#!">Link 4</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2020 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >MDBootstrap.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    <script src="flatpckr.js"></script>
+  </body>
+</html>
